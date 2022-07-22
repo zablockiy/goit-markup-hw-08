@@ -1,0 +1,26 @@
+//Перший паршал
+
+:root {
+    /* fonts */
+    --main-font: "roboto";
+    --secondary-font: "raleway";
+
+    /* text colors  */
+    --accent-color: #2196f3;
+    --light-theme-txt: #212121;
+    --dark-theme-txt: #ffffff;
+    --content-txt: #757575;
+
+    /* bg colors */
+    --dark-theme-bg: #2f303a;
+    --white-theme-bg: #ffffff;
+    --light-theme-bg: #f5f4fa;
+
+    /* others */
+    --borders-box: #eeeeee;
+    --icon-color: #afb1b8;
+    --btn-hover-color: #188ce8;
+
+    /* animation */
+    --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
