@@ -16,13 +16,20 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 528px;
-    height: 581px;
+    width: 450px;
+    height: 609px;
     background-color: var(--white-theme-bg);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     z-index: 100;
+
+    @media screen and (min-width:1200px) {
+        width: 528px;
+        height: 581px;
+
+        
+    }
 }
 
 .modal-close-btn {
@@ -95,13 +102,18 @@
     margin-bottom: 30px;
 }
 
+.modal-form-check{
+    margin: -7px;
+
+}
+
 .form-icon-check {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 16px;
     height: 15px;
-    margin-right: 7px;
+    margin-right: 5px;
     border: 2px solid var(--light-theme-txt);
     border-radius: 2px;
     outline-offset: -2px;
@@ -110,18 +122,32 @@
 }
 
 .checkbox-text {
-    margin-right: 10px;
+    
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: var(--content-txt);
+
+    @media screen and (min-width:1200px) {
+        font-size: 14px;
+        line-height: 1,17;
+
+        
+    }
 }
 
 .checkbox-link {
     text-decoration-line: underline;
     color: var(--accent-color);
+    font-size: 12px;
+
+    @media screen and (min-width:1200px) {
+        font-size: 14px;
 }
+
+}
+
 
 .modal-form-check:checked+.form-icon-check {
     background-color: var(--accent-color);

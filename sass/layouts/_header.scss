@@ -5,13 +5,30 @@
 .header__container {
     display: flex;
     align-items: center;
-    height: 80px;
+    height: 60px;
+
+    @media screen and (min-width:1200px) {
+        height: 80px;
+        
+    }
 
 }
 
 .header__nav {
-    display: flex;
-    margin-left: 93px;
+    display: none;
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        margin-left: 88px;
+    }
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+        margin-left: 93px;
+        }
+
+
+    
 }
 
 .header__logo-web {
@@ -19,10 +36,16 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--accent-color);
+
+    @media screen and (min-width:1200px) {
+        font-size: 26px;
+        line-height: 1.19;
+        
+    }
 }
 
 .header__logo {
@@ -30,10 +53,17 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--light-theme-txt);
+
+    @media screen and (min-width:1200px) {
+            font-size: 26px;
+            line-height: 1.17;
+            
+    
+        }
 
 }
 
@@ -74,7 +104,17 @@
 
 
 .header__contact {
-    margin-left: auto;
+    display: none;
+    // margin-left: auto;
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        
+        margin-left: auto;
+    }
+
+
+    
 }
 
 .header__contact-link {
@@ -88,19 +128,32 @@
 
 
 .header__contact-list {
-    display: flex;
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        
+    }
+    
     font-weight: 500;
+    font-size: 12px;
     line-height: 1.07;
     letter-spacing: 0.02em;
     color: var(--content-txt);
     cursor: pointer;
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        
+    }
 
 }
 
 .header__contact-link {
     display: flex;
     align-items: center;
-    justify-content: center;
+    
+    
     color: var(--content-txt);
     transition: color var(--anim);
 
@@ -108,11 +161,51 @@
     &:focus {
         color: var(--accent-color);
         }
+
+    @media screen and (min-width:1200px) {
+       justify-content: center;
+            
+        }
+}
+
+.header__contact-mail {
+    @media screen and (max-width:1199px) {
+    margin-bottom: 10px;
+    }
+    
+
+    
 }
 
 .header__icon {
     margin-right: 10px;
     fill: currentColor;
+
+    
+}
+
+.header__icon-mail {
+    width: 14px;
+    height: 10px;
+
+    @media screen and(min-width:1200px) {
+        width: 16px;
+        height: 12px;
+    
+        }
+}
+
+.header__icon-tel {
+    width: 10px;
+    height: 14px;
+
+
+    @media screen and(min-width:1200px) {
+            width: 10px;
+            height: 16px;
+    
+        }
+
 }
 
 .header__contact-link.header__link:hover .header__icon,
@@ -125,11 +218,16 @@
 .current.header__link::after {
     content: '';
     position: absolute;
-    bottom: -1px;
+    bottom: 9px;
     left: 0;
     width: 100%;
     height: 4px;
     display: inline-block;
     background-color: var(--accent-color);
     border-radius: 2px;
+
+    @media screen and (min-width:1200px) {
+        bottom: -1px;
+        
+    }
 }
