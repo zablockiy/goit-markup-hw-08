@@ -19,7 +19,7 @@
   </head>
 <body>
         <!-- хедер -->
-        <header class="header">
+      <header class="header">
       <div class="container header__container">
         <a class="header__logo link" href="./index.html">
           <span class="header__logo-web">Web</span>Studio
@@ -31,7 +31,7 @@
              
             </li>
             <li class="header__list-item">
-              <a class="header__link link current" href="./portfolio.html">Портфолио</a>
+              <a class="header__link link  current" href="./portfolio.html">Портфолио</a>
             </li>
             <li class="header__list-item">
               <a class="header__link link" href="">Контакты</a>
@@ -41,8 +41,8 @@
         <div class="header__contact">
           <ul class="list header__contact-list">
             <li>
-              <a class="link header__contact-link" href="mailto:info@devstudio.com">
-                <svg class="header__icon icon" width="16" height="12">
+              <a class="link header__contact-link header__contact-mail" href="mailto:info@devstudio.com">
+                <svg class="header__icon icon header__icon-mail"  >
                   <use href="./images/icons.svg#icon-mail-header"></use>
                 </svg>
                 info@devstudio.com
@@ -50,7 +50,7 @@
             </li>
             <li>
               <a class="link header__contact-link" href="tel:+380961111111">
-                <svg class="header__icon icon" width="10" height="16">
+                <svg class="header__icon icon header__icon-tel" >
                   <use href="./images/icons.svg#icon-tel-header"></use>
                 </svg>
                 +38 096 111 11 11
@@ -58,6 +58,51 @@
             </li>
           </ul>
         </div>
+        <button class="mobile-menu__btn" type="button" data-menu-button>
+          <svg class="mobile-menu__icon" width="24px" height="16px">
+            <use class="mobile-menu__burger" href="images/icons.svg#mobile-menu"></use>
+            <use class="mobile-menu__close" href="images/icons.svg#mobile-close"></use>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Мобільне меню -->
+      <div class="mobile-menu" data-menu>
+            <ul class="mobile-menu__nav list">
+              <li class="mobile-menu__nav-item">
+                <a class="mobile-menu__nav-link  link" href="./index.html">Студия</a>
+              </li>
+              <li class="mobile-menu__nav-item">
+                <a class="mobile-menu__nav-link mobile__current link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="mobile-menu__nav-item">
+                <a class="mobile-menu__nav-link link" href="Контакти">Контакты</a>
+              </li>
+            </ul>
+            <ul class="mobile-menu__contacts list">
+              <li class="mobile-menu__contacts-item">
+                <a class="mobile-menu__contacts__tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+              <li class="mobile-menu__contacts-item">
+                <a class="mobile-menu__contacts__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              </li>
+            </ul>
+            <ul class="mobile-menu__socials list">
+              <li class="mobile-menu__socials-item">
+                <a class="link mobile-menu__socials-link" href="Instagram">Instagram</a>
+              </li>
+              <li class="mobile-menu__socials-item">
+                <a class="link mobile-menu__socials-link" href="Twitter">Twitter</a>
+              </li>
+              <li class="mobile-menu__socials-item">
+                <a class="link mobile-menu__socials-link" href="Facebook">Facebook</a>
+              </li>
+              <li class="mobile-menu__socials__item">
+                <a class="link mobile-menu__socials-link" href="LinkedIn">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+      </div>
       </div>
     </header>
     
@@ -75,15 +120,29 @@
            </ul>
            <ul class="list portfolio__list">
                <li class="portfolio__box">
-                <a class="portfolio__item" href="">
+                <a class="portfolio__item portfolio__item--grow" href="">
                    <div class="overlay">
-                    <img src="./images/images-portfolio/img-prtf-1.jpg" width="370" height="294" alt="Три фото на экране ноутбука">
-                   <div class="portfolio__overlay">
+                    <picture> 
+                     <source 
+                       media="(min-width: 1200px)"
+									     srcset="images/images-portfolio/prtf-1-desc.jpg 1x, images/images-portfolio/prtf-1-desc@2x.jpg 2x"
+									     type="image/jpg">
+                     <source 
+                       media="(min-width: 768px)"
+									     srcset="images/images-portfolio/prtfl-1-tab.jpg 1x, images/images-portfolio/prtfl-1-tab@2x.jpg 2x"
+									     type="image/jpg">  
+                     <source 
+                       media="(max-width: 767px)"
+									     srcset="images/images-portfolio/prtfl-1-mob.jpg 1x, images/images-portfolio/prtfl-1-mob@2x.jpg 2x"
+									     type="image/jpg">
+                    <img src="images/images-portfolio/prtfl-1-mob.jpg"  alt="Три фото на экране ноутбука">
+                    </picture>
+                    <div class="portfolio__overlay portfolio__overlay">
                     <p class="portfolio__desc">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                    </div>
                   </div>
                   
-                    <div class="portfolio__box-content">
+                    <div class="portfolio__box-content portfolio__box-content--grow">
                         <h2 class="main-title">Технокряк</h2>
                         <p class="main-content">Веб-сайт</p>
                     </div>
@@ -94,7 +153,21 @@
                <li class="portfolio__box">
                 <a class="portfolio__item" href="">
                   <div class="overlay">
-                   <img src="./images/images-portfolio/img-prtf-2.jpg" width="370" height="294" alt="Баскетболисты в игре">
+                    <picture>
+                    <source 
+                       media="(min-width: 1200px)"
+									     srcset="images/images-portfolio/prtf-2-desc.jpg 1x, images/images-portfolio/prtf-2-desc@2x.jpg 2x"
+									     type="image/jpg">
+                     <source 
+                       media="(min-width: 768px)"
+									     srcset="images/images-portfolio/prtfl-2-tab.jpg 1x, images/images-portfolio/prtfl-2-tab@2x.jpg 2x"
+									     type="image/jpg">  
+                     <source 
+                       media="(max-width: 767px)"
+									     srcset="images/images-portfolio/prtfl-2-mob.jpg 1x, images/images-portfolio/prtfl-2-mob@2x.jpg 2x"
+									     type="image/jpg">  
+                   <img src="images/images-portfolio/prtfl-2-mob.jpg"  alt="Баскетболисты в игре">
+                   </picture>
                    <div class="portfolio__overlay">
                     <p class="portfolio__desc">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                    </div>
@@ -109,8 +182,22 @@
                 <a class="portfolio__item" href="">
                    
                   <div class="overlay">
-                    <img src="./images/images-portfolio/img-prtf-3.jpg" width="370" height="294" alt="Афиша рыбного ресторана">
-                   <div class="portfolio__overlay">
+                    <picture>
+                      <source 
+                       media="(min-width: 1200px)"
+									     srcset="images/images-portfolio/prtf-3-desc.jpg 1x, images/images-portfolio/prtf-3-desc@2x.jpg 2x"
+									     type="image/jpg">
+                     <source 
+                       media="(min-width: 768px)"
+									     srcset="images/images-portfolio/prtfl-3-tab.jpg 1x, images/images-portfolio/prtfl-3-tab@2x.jpg 2x"
+									     type="image/jpg">  
+                     <source 
+                       media="(max-width: 767px)"
+									     srcset="images/images-portfolio/prtfl-3-mob.jpg 1x, images/images-portfolio/prtfl-3-mob@2x.jpg 2x"
+									     type="image/jpg"> 
+                    <img src="images/images-portfolio/prtfl-3-mob.jpg"  alt="Афиша рыбного ресторана">
+                    </picture>
+                    <div class="portfolio__overlay">
                     <p class="portfolio__desc">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                    </div> 
                   </div>
@@ -123,8 +210,22 @@
                <li class="portfolio__box">
                 <a class="portfolio__item" href="">
                   <div class="overlay">
-                    <img src="./images/images-portfolio/img-prtf-4.jpg" width="370" height="294" alt="Наушники">
-                   <div class="portfolio__overlay">
+                    <picture>
+                      <source 
+                       media="(min-width: 1200px)"
+									     srcset="images/images-portfolio/prtf-4-desc.jpg 1x, images/images-portfolio/prtf-4-desc@2x.jpg 2x"
+									     type="image/jpg">
+                     <source 
+                       media="(min-width: 768px)"
+									     srcset="images/images-portfolio/prtfl-4-tab.jpg 1x, images/images-portfolio/prtfl-4-tab@2x.jpg 2x"
+									     type="image/jpg">  
+                     <source 
+                       media="(max-width: 767px)"
+									     srcset="images/images-portfolio/prtfl-4-mob.jpg 1x, images/images-portfolio/prtfl-4-mob@2x.jpg 2x"
+									     type="image/jpg">
+                    <img src="images/images-portfolio/prtfl-4-mob.jpg" alt="Наушники">
+                   </picture>
+                    <div class="portfolio__overlay">
                     <p class="portfolio__desc">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                    </div> 
                   </div>
@@ -137,8 +238,22 @@
                <li class="portfolio__box">
                 <a class="portfolio__item" href="">
                   <div class="overlay">
-                    <img src="./images/images-portfolio/img-prtf-5.jpg" width="370" height="294" alt="Пример дизайна коробок">
-                   <div class="portfolio__overlay">
+                    <picture>
+                      <source 
+                       media="(min-width: 1200px)"
+									     srcset="images/images-portfolio/prtf-5-desc.jpg 1x, images/images-portfolio/prtf-5-desc@2x.jpg 2x"
+									     type="image/jpg">
+                     <source 
+                       media="(min-width: 768px)"
+									     srcset="images/images-portfolio/prtfl-5-tab.jpg 1x, images/images-portfolio/prtfl-5-tab@2x.jpg 2x"
+									     type="image/jpg">  
+                     <source 
+                       media="(max-width: 767px)"
+									     srcset="images/images-portfolio/prtfl-5-mob.jpg 1x, images/images-portfolio/prtfl-5-mob@2x.jpg 2x"
+									     type="image/jpg">
+                    <img src="images/images-portfolio/prtfl-5-mob.jpg"  alt="Пример дизайна коробок">
+                   </picture>
+                    <div class="portfolio__overlay">
                     <p class="portfolio__desc">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                    </div> 
                   </div>
@@ -151,8 +266,23 @@
                <li class="portfolio__box">
                 <a class="portfolio__item" href="">
                   <div class="overlay">
-                    <img src="./images/images-portfolio/img-prtf-6.jpg" width="370" height="294" alt="Экран MAC">
-                   <div class="portfolio__overlay">
+                    <picture>
+                    <source 
+                       media="(min-width: 1200px)"
+									     srcset="images/images-portfolio/prtf-6-desc.jpg 1x, images/images-portfolio/prtf-6-desc@2x.jpg 2x"
+									     type="image/jpg">
+                     <source 
+                       media="(min-width: 768px)"
+									     srcset="images/images-portfolio/prtfl-6-tab.jpg 1x, images/images-portfolio/prtfl-6-tab@2x.jpg 2x"
+									     type="image/jpg">  
+                     <source 
+                       media="(max-width: 767px)"
+									     srcset="images/images-portfolio/prtfl-6-mob.jpg 1x, images/images-portfolio/prtfl-6-mob@2x.jpg 2x"
+									     type="image/jpg">
+                    <img src="images/images-portfolio/prtfl-6-mob.jpg"  alt="Экран MAC">
+                   </picture>
+                  
+                    <div class="portfolio__overlay">
                     <p class="portfolio__desc">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                    </div> 
                   </div>
@@ -162,11 +292,25 @@
                     </div>
                 </a>
                </li>
-               <li class="portfolio__box">
+               <li class="portfolio__box portfolio__box--ret">
                 <a class="portfolio__item" href="">
                   <div class="overlay">
-                    <img src="./images/images-portfolio/img-prtf-7.jpg" width="370" height="294" alt="Разворот журнала">
-                   <div class="portfolio__overlay">
+                    <picture>
+                      <source 
+                       media="(min-width: 1200px)"
+									     srcset="images/images-portfolio/prtf-7-desc.jpg 1x, images/images-portfolio/prtf-7-desc@2x.jpg 2x"
+									     type="image/jpg">
+                     <source 
+                       media="(min-width: 768px)"
+									     srcset="images/images-portfolio/prtfl-7-tab.jpg 1x, images/images-portfolio/prtfl-7-tab@2x.jpg 2x"
+									     type="image/jpg">  
+                     <source 
+                       media="(max-width: 767px)"
+									     srcset="images/images-portfolio/prtfl-7-mob.jpg 1x, images/images-portfolio/prtfl-7-mob@2x.jpg 2x"
+									     type="image/jpg">
+                    <img src="images/images-portfolio/prtfl-7-mob.jpg"  alt="Разворот журнала">
+                   </picture>
+                    <div class="portfolio__overlay">
                     <p class="portfolio__desc">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                    </div> 
                   </div>
@@ -176,11 +320,25 @@
                     </div>
                 </a>
                </li>
-               <li class="portfolio__box">
+               <li class="portfolio__box portfolio__box--ret">
                 <a class="portfolio__item" href="">
                   <div class="overlay">
-                    <img src="./images/images-portfolio/img-prtf-8.jpg" width="370" height="294" alt="Бирка на веревке">
-                   <div class="portfolio__overlay">
+                    <picture>
+                      <source 
+                       media="(min-width: 1200px)"
+									     srcset="images/images-portfolio/prtf-8-desc.jpg 1x, images/images-portfolio/prtf-8-desc@2x.jpg 2x"
+									     type="image/jpg">
+                     <source 
+                       media="(min-width: 768px)"
+									     srcset="images/images-portfolio/prtfl-8-tab.jpg 1x, images/images-portfolio/prtfl-8-tab@2x.jpg 2x"
+									     type="image/jpg">  
+                     <source 
+                       media="(max-width: 767px)"
+									     srcset="images/images-portfolio/prtfl-8-mob.jpg 1x, images/images-portfolio/prtfl-8-mob@2x.jpg 2x"
+									     type="image/jpg">
+                    <img src="images/images-portfolio/prtfl-8-mob.jpg" alt="Бирка на веревке">
+                   </picture>
+                    <div class="portfolio__overlay">
                     <p class="portfolio__desc">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                    </div> 
                   </div>
@@ -190,11 +348,25 @@
                     </div>
                 </a>
                </li>
-               <li class="portfolio__box">
+               <li class="portfolio__box portfolio__box--retreat">
                 <a class="portfolio__item" href="">
                   <div class="overlay">
-                    <img src="./images/images-portfolio/img-prtf-9.jpg" width="370" height="294" alt="Руки на клавиатуре ноутбука">
-                   <div class="portfolio__overlay">
+                    <picture>
+                      <source 
+                       media="(min-width: 1200px)"
+									     srcset="images/images-portfolio/prtf-9-desc.jpg 1x, images/images-portfolio/prtf-9-desc@2x.jpg 2x"
+									     type="image/jpg">
+                     <source 
+                       media="(min-width: 768px)"
+									     srcset="images/images-portfolio/prtfl-9-tab.jpg 1x, images/images-portfolio/prtfl-9-tab@2x.jpg 2x"
+									     type="image/jpg">  
+                     <source 
+                       media="(max-width: 767px)"
+									     srcset="images/images-portfolio/prtfl-9-mob.jpg 1x, images/images-portfolio/prtfl-9-mob@2x.jpg 2x"
+									     type="image/jpg">
+                    <img src="images/images-portfolio/prtfl-9-mob.jpg"  alt="Руки на клавиатуре ноутбука">
+                   </picture>
+                    <div class="portfolio__overlay">
                     <p class="portfolio__desc">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                    </div> 
                   </div>
@@ -211,86 +383,93 @@
     </main>
 <!-- футер -->
 <footer class="section-footer">
-    <div class="container container-footer">
-      <div>
-      <a class="link footer-link-logo" href="./index.html"
-        ><span class="logo-web">Web</span>Studio</a
-      >
-      <address>
-        <ul class="list">
-          <li>
-            <a
-              class="link footer-adress"
-              href="https://goo.gl/maps/dULMYjYMqGE6EUVB7"
-              target="_blank"
-              rel="noopener noreferrer"
-              >г. Киев, пр-т Леси Украинки, 26</a
-            >
-          </li>
-          <li>
-            <a
-              class="link footer-link link-mail"
-              href="mailto:info@example.com"
-              >info@example.com</a
-            >
-          </li>
-          <li>
-            <a class="link footer-link link-tel" href="tel:+380991111111"
-              >+38 099 111 11 11</a
-            >
-          </li>
-        </ul>
-      </address>
-      </div>
-      <div class="footer-social">
+      <div class="container container-footer">
+        <div class="footer__contacts">
+          <a class="link footer-link-logo" href="./index.html"
+            ><span class="header__logo-web">Web</span>Studio</a
+          >
+          <address>
+            <ul class="list footer__contacts-list">
+              <li>
+                <a
+                  class="link footer-adress"
+                  href="https://goo.gl/maps/dULMYjYMqGE6EUVB7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >г. Киев, пр-т Леси Украинки, 26</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link footer-link link-mail"
+                  href="mailto:info@example.com"
+                  >info@example.com</a
+                >
+              </li>
+              <li>
+                <a class="link footer-link link-tel" href="tel:+380991111111"
+                  >+38 099 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="footer-social">
           <strong class="join">присоединяйтесь</strong>
           <ul class="footer-icons-list">
-              <li class="footer-icons-item">
-                  <a class="footer-link-icon icon" href="">
-                      <svg class="footer-icon" width="20" height="20">
-                          <use href="./images/icons.svg#icon-instagram"></use>
-                      </svg>
-                  </a>
-              </li>
-              <li class="footer-icons-item">
-                  <a class="footer-link-icon icon" href="">
-                      <svg class="footer-icon" width="20" height="20">
-                          <use href="./images/icons.svg#icon-twitter"></use>
-                      </svg>
-                  </a>
-              </li>
-              <li class="footer-icons-item">
-                  <a class="footer-link-icon icon" href="">
-                      <svg class="footer-icon" width="20" height="20">
-                          <use href="./images/icons.svg#icon-facebook"></use>
-                      </svg>
-                  </a>
-              </li>
-              <li class="footer-icons-item">
-                  <a class="footer-link-icon icon" href="">
-                      <svg class="footer-icon" width="20" height="20">
-                          <use href="./images/icons.svg#icon-linkedin"></use>
-                      </svg>
-                  </a>
-              </li>
+            <li class="footer-icons-item">
+              <a class="footer-link-icon icon" href="">
+                <svg class="footer-icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-icons-item">
+              <a class="footer-link-icon icon" href="">
+                <svg class="footer-icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-icons-item">
+              <a class="footer-link-icon icon" href="">
+                <svg class="footer-icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-icons-item">
+              <a class="footer-link-icon icon" href="">
+                <svg class="footer-icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
+        </div>
+
+        <div class="subscrible">
+          <strong class="join">Подпишитесь на рассылку</strong>
+          <form class="form">
+            <label class="subscrible__form">
+              <input
+                class="subscrible-input"
+                type="email"
+                name="user-email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button class="form-btn" type="submit">
+              <span class="form-btn-text">Подписаться</span>
+              <svg class="form-btn-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
-      <div class="subscrible">
-        <strong class="join">Подпишитесь на рассылку</strong>
-        <form class="form">
-          <label>
-            <input class="subscrible-input" type="email" name="user-email" placeholder="E-mail"> 
-          </label>
-          <button class="form-btn" type="submit">
-            <span class="form-btn-text">Подписаться</span>
-            <svg class="form-btn-icon" width="24" height="24">
-              <use href="./images/icons.svg#icon-send"></use>
-            </svg>
-          </button>
-        </form>
-      </div>
-    </div>
-  </footer>
+    </footer>
   <script src="./js/modal.js"></script>
+  <script src="./js/mobile.js"></script>
 </body>
 </html>

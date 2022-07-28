@@ -67,6 +67,50 @@
             </li>
           </ul>
         </div>
+        <button class="mobile-menu__btn" type="button" data-menu-button>
+          <svg class="mobile-menu__icon" width="24px" height="16px">
+            <use class="mobile-menu__burger" href="images/icons.svg#mobile-menu"></use>
+            <use class="mobile-menu__close" href="images/icons.svg#mobile-close"></use>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Мобільне меню -->
+      <div class="mobile-menu" data-menu>
+            <ul class="mobile-menu__nav list">
+              <li class="mobile-menu__nav-item">
+                <a class="mobile-menu__nav-link mobile__current link" href="./index.html">Студия</a>
+              </li>
+              <li class="mobile-menu__nav-item">
+                <a class="mobile-menu__nav-link link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="mobile-menu__nav-item">
+                <a class="mobile-menu__nav-link link" href="Контакти">Контакты</a>
+              </li>
+            </ul>
+            <ul class="mobile-menu__contacts list">
+              <li class="mobile-menu__contacts-item">
+                <a class="mobile-menu__contacts__tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+              <li class="mobile-menu__contacts-item">
+                <a class="mobile-menu__contacts__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              </li>
+            </ul>
+            <ul class="mobile-menu__socials list">
+              <li class="mobile-menu__socials-item">
+                <a class="link mobile-menu__socials-link" href="Instagram">Instagram</a>
+              </li>
+              <li class="mobile-menu__socials-item">
+                <a class="link mobile-menu__socials-link" href="Twitter">Twitter</a>
+              </li>
+              <li class="mobile-menu__socials-item">
+                <a class="link mobile-menu__socials-link" href="Facebook">Facebook</a>
+              </li>
+              <li class="mobile-menu__socials__item">
+                <a class="link mobile-menu__socials-link" href="LinkedIn">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
       </div>
     </header>
 
@@ -662,5 +706,6 @@
     <script src="./js/input-mask.js"></script>
     <!-- input mask end -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile.js"></script>
   </body>
 </html>
