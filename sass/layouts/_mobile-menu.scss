@@ -16,9 +16,6 @@
         fill: var(--accent-color);
         }
 
-    
-   
-
     @media screen and (min-width: 768px) {
         display: none;
     }
@@ -45,9 +42,6 @@
 .mobile-menu__icon {
     z-index: 1000;
 }
-
-
-
 
 .mobile-menu {
     position: fixed;
