@@ -30,14 +30,18 @@
     }
 }
 
+
+
 .mobile-menu__close {
     opacity: 0;
     transition: 500ms;
+    
 
     .mobile-menu__btn.is-open & {
         opacity: 1;
     }
 }
+
 
 .mobile-menu__icon {
     z-index: 1000;
@@ -53,6 +57,7 @@
     height: 100%;
     padding: 48px 40px;
     z-index: 100;
+    
 
     display: flex;
     flex-direction: column;

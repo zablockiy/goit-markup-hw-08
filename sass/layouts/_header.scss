@@ -1,11 +1,14 @@
 .header {
     border-bottom: 1px solid #ECECEC;
+    
 }
 
 .header__container {
     display: flex;
     align-items: center;
     height: 60px;
+    
+    
 
     @media screen and (min-width:1200px) {
         height: 80px;
