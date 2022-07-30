@@ -1,43 +1,42 @@
 .example__list {
-    display: flex;
-
+  display: flex;
 }
 
 .example__section {
-    padding-top: 0;
+  padding-top: 0;
 
-    @media  screen and (max-width:1199px) {
-        display: none;
-    }
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .example__item {
-    position: relative;
+  position: relative;
 
-    &:not(:last-child) {
-            margin-right: 30px;
-        }
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .example__label-text {
-    font-family: "Roboto";
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-align: center;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--dark-theme-txt);
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--dark-theme-txt);
 }
 
 .example__label {
-    overflow: visible;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 370px;
-    height: 70px;
-    background: rgba(47, 48, 58, 0.8);
+  overflow: visible;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
 }

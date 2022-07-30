@@ -549,7 +549,7 @@ img {
 }
 
 .header {
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
 }
 
 .header__container {
@@ -1237,9 +1237,6 @@ img {
   }
 }
 
-.portfolio__box-content {
-  width: 450px;
-}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio__box-content {
     width: 354px;

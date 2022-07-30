@@ -1,237 +1,196 @@
 .header {
-    border-bottom: 1px solid #ECECEC;
-    
+  border-bottom: 1px solid #ececec;
 }
 
 .header__container {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    
-    
+  display: flex;
+  align-items: center;
+  height: 60px;
 
-    @media screen and (min-width:1200px) {
-        height: 80px;
-        
-    }
-
+  @media screen and (min-width: 1200px) {
+    height: 80px;
+  }
 }
 
 .header__nav {
-    display: none;
+  display: none;
 
-    @media screen and (min-width:768px) {
-        display: flex;
-        margin-left: 88px;
-    }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 88px;
+  }
 
-    @media screen and (min-width:1200px) {
-        display: flex;
-        margin-left: 93px;
-        }
-
-
-    
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: 93px;
+  }
 }
 
 .header__logo-web {
-    display: flex;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    color: var(--accent-color);
+  display: flex;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
 
-    @media screen and (min-width:1200px) {
-        font-size: 26px;
-        line-height: 1.19;
-        
-    }
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .header__logo {
-    display: flex;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    color: var(--light-theme-txt);
+  display: flex;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--light-theme-txt);
 
-    @media screen and (min-width:1200px) {
-            font-size: 26px;
-            line-height: 1.17;
-            
-    
-        }
-
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.17;
+  }
 }
 
 .header__list {
-    position: relative;
+  position: relative;
 
-    display: flex;
+  display: flex;
 }
 
 .header__link {
+  display: block;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--light-theme-txt);
+  cursor: pointer;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: color var(--anim);
 
-    display: block;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--light-theme-txt);
-    cursor: pointer;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    transition: color var(--anim);
-
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    
-        }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .header__list-item {
-    position: relative;
+  position: relative;
 
-    &:not(:last-child) {
-        margin-right: 50px;
-        }
-
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
-
-
 .header__contact {
-    display: none;
-    
+  display: none;
 
-    @media screen and (min-width:768px) {
-        display: flex;
-        
-        margin-left: auto;
-    }
+  @media screen and (min-width: 768px) {
+    display: flex;
 
-
-    
+    margin-left: auto;
+  }
 }
 
 .header__contact-link {
-    position: relative;
-    margin-left: 50px;
+  position: relative;
+  margin-left: 50px;
 }
 
 .current {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
-
-
 .header__contact-list {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  }
 
-    @media screen and (min-width:768px) and (max-width:1199px) {
-        
-    }
-    
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.07;
-    letter-spacing: 0.02em;
-    color: var(--content-txt);
-    cursor: pointer;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  color: var(--content-txt);
+  cursor: pointer;
 
-    @media screen and (min-width:1200px) {
-        display: flex;
-        flex-direction: row;
-        font-size: 14px;
-        
-    }
-
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+  }
 }
 
 .header__contact-link {
-    display: flex;
-    align-items: center;
-    
-    
-    color: var(--content-txt);
-    transition: color var(--anim);
+  display: flex;
+  align-items: center;
 
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-        }
+  color: var(--content-txt);
+  transition: color var(--anim);
 
-    @media screen and (min-width:1200px) {
-       justify-content: center;
-            
-        }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+  }
 }
 
 .header__contact-mail {
-    @media screen and (max-width:1199px) {
+  @media screen and (max-width: 1199px) {
     margin-bottom: 10px;
-    }
-    
-
-    
+  }
 }
 
 .header__icon {
-    margin-right: 10px;
-    fill: currentColor;
-
-    
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .header__icon-mail {
-    width: 14px;
-    height: 10px;
+  width: 14px;
+  height: 10px;
 
-    @media screen and(min-width:1200px) {
-        width: 16px;
-        height: 12px;
-    
-        }
+  @media screen and(min-width:1200px) {
+    width: 16px;
+    height: 12px;
+  }
 }
 
 .header__icon-tel {
+  width: 10px;
+  height: 14px;
+
+  @media screen and(min-width:1200px) {
     width: 10px;
-    height: 14px;
-
-
-    @media screen and(min-width:1200px) {
-            width: 10px;
-            height: 16px;
-    
-        }
-
+    height: 16px;
+  }
 }
 
 .header__contact-link.header__link:hover .header__icon,
 .header__contact-link.header__link:focus .header__icon {
-    fill: var(--accent-color);
+  fill: var(--accent-color);
 }
 
-
-
 .current.header__link::after {
-    content: '';
-    position: absolute;
-    bottom: 9px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    display: inline-block;
-    background-color: var(--accent-color);
-    border-radius: 2px;
+  content: "";
+  position: absolute;
+  bottom: 9px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  display: inline-block;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 
-    @media screen and (min-width:1200px) {
-        bottom: -1px;
-        
-    }
+  @media screen and (min-width: 1200px) {
+    bottom: -1px;
+  }
 }
